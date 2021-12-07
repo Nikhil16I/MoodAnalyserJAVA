@@ -12,9 +12,10 @@ public class MoodAnalyserMain {
     	assertEquals("sad", mood);
     }
     @Test        
-   	public void MooHappy() {
+   	public void MoodHappy() {
        	MoodAnalyser analysemood = new MoodAnalyser("Im in Happy Mood");
        	String mood = analysemood.Analyse();
        	assertEquals("happy", mood);
        }
+    
 }
