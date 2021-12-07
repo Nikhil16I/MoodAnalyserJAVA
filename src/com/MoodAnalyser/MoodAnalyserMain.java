@@ -17,5 +17,10 @@ public class MoodAnalyserMain {
        	String mood = analysemood.Analyse();
        	assertEquals("happy", mood);
        }
-    
+    @Test        
+   	public void TestMoodNull() {
+       	MoodAnalyser analysemood = new MoodAnalyser("Im in Happy Mood");
+       	String mood = analysemood.Analyse();
+       	assertEquals("happy", mood); //TestCase for null point exception
+    }
 }
