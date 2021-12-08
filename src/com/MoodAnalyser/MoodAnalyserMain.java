@@ -6,21 +6,21 @@ import org.junit.Test;
 
 public class MoodAnalyserMain {
     @Test        
-	public void MoodSad() {
-    	MoodAnalyser analysemood = new MoodAnalyser("Im in Sad Mood");
+	public void MoodSad() throws Exception{
+    	MoodAnalyser analysemood = new MoodAnalyser("Im in sad Mood");
     	String mood = analysemood.Analyse();
     	assertEquals("sad", mood);
     }
     @Test        
-   	public void MoodHappy() {
-       	MoodAnalyser analysemood = new MoodAnalyser("Im in Happy Mood");
+   	public void MooHappy() throws Exception {
+       	MoodAnalyser analysemood = new MoodAnalyser("Im in Any Mood");
        	String mood = analysemood.Analyse();
        	assertEquals("happy", mood);
        }
-    @Test        
-   	public void TestMoodNull() {
-       	MoodAnalyser analysemood = new MoodAnalyser("Im in Happy Mood");
+    @Test (expected=ExceptionClass.class)      
+   	public void TestMoodNull() throws Exception {
+       	MoodAnalyser analysemood = new MoodAnalyser(null);
        	String mood = analysemood.Analyse();
-       	assertEquals("happy", mood); //TestCase for null point exception
+       	assertEquals(null, mood); //TestCase for null point exception
     }
 }
