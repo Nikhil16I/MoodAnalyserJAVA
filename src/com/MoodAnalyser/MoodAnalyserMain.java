@@ -17,10 +17,10 @@ public class MoodAnalyserMain {
        	String mood = analysemood.Analyse();
        	assertEquals("happy", mood);
        }
-    @Test (expected=ExceptionClass.class)      
+    @Test       
    	public void TestMoodNull() throws Exception {
        	MoodAnalyser analysemood = new MoodAnalyser(null);
        	String mood = analysemood.Analyse();
-       	assertEquals(null, mood); //TestCase for null point exception
+       	assertEquals("happy", mood); 
     }
 }
