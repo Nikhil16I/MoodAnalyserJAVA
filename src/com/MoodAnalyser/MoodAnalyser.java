@@ -17,9 +17,9 @@ public class MoodAnalyser {
 	    	 //System.out.println(msgs);
 			throw new ExceptionClass("Message Cast cant be Null",ExceptionType.NULL);
 		}
-		/*else if(msgs.equals("")) {
-			throw new ExceptionClass("Message Cast cant be Empty");
-    	}*/
+		else if(msgs.equals("")) {
+			throw new ExceptionClass("Message Cast cant be Empty",ExceptionType.EMPTYSTRING);
+    	}
 	    else if(msgs.contains("sad"))
     	// System.out.println(msgs);
 			return "sad";	
