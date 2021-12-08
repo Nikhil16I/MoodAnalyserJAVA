@@ -6,5 +6,4 @@ public class ExceptionClass extends Exception {
 		// TODO Auto-generated constructor stub
 		super(msgs);
 	}
-
 }
