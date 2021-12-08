@@ -1,5 +1,7 @@
 package com.MoodAnalyser;
 
+import com.MoodAnalyser.ExceptionClass.ExceptionType;
+
 public class MoodAnalyser {
 	String msgs;
 	
@@ -8,12 +10,12 @@ public class MoodAnalyser {
 		this.msgs = msgs;
 	}                   /* Constructor.,Refactored*/
 
-
+	
 	public String Analyse() throws Exception{
-		
+	try {	
 		if(msgs == null) {
 	    	 //System.out.println(msgs);
-			throw new ExceptionClass("Message Cast cant be Null");
+			throw new ExceptionClass("Message Cast cant be Null",ExceptionType.NULL);
 		}
 		/*else if(msgs.equals("")) {
 			throw new ExceptionClass("Message Cast cant be Empty");
@@ -23,5 +25,9 @@ public class MoodAnalyser {
 			return "sad";	
 	    else
 		    return "happy";
+	}catch(ExceptionClass ec) {
+		System.out.println(ec);
+		return "happy";
 	}
+  }
 }
